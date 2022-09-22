@@ -5,7 +5,7 @@ console.log(galleryItems);
 const galaryContainer = document.querySelector(".gallery");
 const gridImages = createImagesMarkup(galleryItems);
 galaryContainer.insertAdjacentHTML("beforeend", gridImages);
-galaryContainer.addEventListener("click", onGridImagesClick);
+// galaryContainer.addEventListener("click", onGridImagesClick);
 function createImagesMarkup(galleryItems) {
   return galleryItems
     .map(({ preview, original, description }) => {
@@ -15,10 +15,10 @@ function createImagesMarkup(galleryItems) {
     })
     .join("");
 }
-function onGridImagesClick(evt) {
-  evt.preventDefault();
-  let lightBoxGallery = new SimpleLightbox(".gallery a", {
-    captionsData: "alt",
-    captionDelay: 250,
-  });
-}
+// function onGridImagesClick(evt) {
+//   evt.preventDefault();
+let lightBoxGallery = new SimpleLightbox(".gallery a", {
+  captionsData: "alt",
+  captionDelay: 250,
+});
+// }
